@@ -279,6 +279,34 @@
                 <p>Correct or update your voter information quickly through the official portal.</p>
                 <button class="btn open-modal" data-modal="modal-voter">Start Correction</button>
             </div>
+
+
+
+<!-- Inside "Instant Help & Book Services" services-grid, add this after Voter ID Correction -->
+
+
+<div class="service-card">
+    <h3>Aadhaar Card Correction</h3>
+    <p>Update or correct your Aadhaar details easily through the official portal or do it through 3rd party service.</p>
+    <button class="btn open-modal" data-modal="modal-aadhaar">Start Correction</button>
+</div>
+
+<!-- PAN Card Correction -->
+<div class="service-card">
+    <h3>PAN Card Correction</h3>
+    <p>Easily update or correct your PAN Card details online, or get assisted by a 3rd party expert.</p>
+    <button class="btn open-modal" data-modal="modal-pan">Start Correction</button>
+</div>
+
+<!-- Driving Licence Services -->
+<div class="service-card">
+    <h3>Driving Licence Services</h3>
+    <p>Apply for a new licence, renew, or correct details using the government portal or via an agent.</p>
+    <button class="btn open-modal" data-modal="modal-dl">Start Process</button>
+</div>
+
+
+
         </div>
     </section>
 
@@ -288,7 +316,7 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>Emergency Helplines</h3>
-                <p>Quick access to Police, Fire, and Ambulance services.</p>
+                <p>Quick access to Police, Fire, and Ambulance services, Municipality, Electrick Office, Hospital</p>
                 <button class="btn open-modal" data-modal="modal-emergency">View Numbers</button>
             </div>
             <div class="service-card">
@@ -332,11 +360,19 @@
     <h3>WiFi Providers</h3>
     <ul class="contact-list">
       <li>
-        LocalNet Mathabhanga<br>
+        SkyNet Mathabhanga<br>
         <a href="tel:+919384884420" class="call-btn">Call: +91 93848 84420</a>
       </li>
       <li>
-        BSNL Broadband<br>
+        CityNet Broadband<br>
+        <a href="tel:+919384884420" class="call-btn">Call: +91 93848 84420</a>
+      </li>
+      <li>
+        Airtel Broadband<br>
+        <a href="tel:18003451504" class="call-btn">Call: 18003451504</a>
+      </li>
+      <li>
+        Jio Fiber & Airfiber<br>
         <a href="tel:18003451504" class="call-btn">Call: 18003451504</a>
       </li>
     </ul>
@@ -348,11 +384,41 @@
     <button class="close">&times;</button>
     <h3>Instant Voter ID Correction</h3>
     <p>Visit the Election Commission Official Portal to update your voter info:<br>
-      <a href="https://voters.eci.gov.in/" target="_blank" class="call-btn" style="color:#0a0a1a;">Go to Portal</a>
+      <a href="https://voters.eci.gov.in/" target="_blank" class="call-btn" style="color:#0a0a1a;">Go to Portal</a> <a href="tel:1950" class="call-btn">Helpline 1950</a>
     </p>
-    <p>Helpline: <a href="tel:1950" class="call-btn">Call 1950</a></p>
+<br>
+    <p style="margin-top: 15px; font-weight:bold; color: #00ffff;">3rd Party Correction & Full Guide (₹100)</p>
+    <a href="tel:+919091544508" class="call-btn" tabindex="0">+91 90915 44508</a>
+    <p style="font-size: 0.9em; color: #888;">Remember, Delivery charge ₹25 will be charged at your doorstep during your new voter card delivery.</p>
   </div>
 </div>
+
+
+
+<!-- Aadhaar Card Correction Modal -->
+<div class="modal" id="modal-aadhaar" aria-modal="true" tabindex="-1">
+  <div class="modal-content">
+    <button class="close" aria-label="Close">&times;</button>
+    <h3>Aadhaar Card Correction Guide</h3>
+    <ol style="color:#b0b0b0; line-height: 1.4;">
+      <li>Visit the official UIDAI correction portal: 
+        <a href="https://uidai.gov.in/my-aadhaar/update-aadhaar.html" target="_blank" class="call-btn" style="color:#0a0a1a;">Update Aadhaar Details</a>
+      </li>
+      <li>Create or log in to your Aadhaar account.</li>
+      <li>Select the field(s) you want to update (e.g., name, address).</li>
+      <li>Upload the required documents as proof.</li>
+      <li>Submit the request and note your Update Request Number (URN).</li>
+      <li>Track the correction status on the UIDAI site.</li>
+    </ol>
+    <p style="margin-top: 15px; font-weight:bold; color: #00ffff;">3rd Party Slot Booking & Help</p>
+    <p>You can book slot and assistance by calling :</p>
+    <a href="tel:+919091544508" class="call-btn" tabindex="0">+91 90915 44508</a>
+    <p style="font-size: 0.9em; color: #888;">Slot Booking charge and ₹50 required. They provide full guide, quick scheduling and document assistance for a small fee.</p>
+  </div>
+</div>
+
+
+
 <!-- Emergency Helplines -->
 <div class="modal" id="modal-emergency">
   <div class="modal-content">
@@ -372,6 +438,14 @@
         <a href="tel:102" class="call-btn">Call: 102</a>
       </li>
       <li>
+        Electric Office<br>
+        <a href="tel:102" class="call-btn">Call: XXX</a>
+      </li>
+      <li>
+        Mathabhanga Municipality<br>
+        <a href="tel:102" class="call-btn">Call: XXXX</a>
+      </li>
+      <li>
         Mathabhanga Hospital<br>
         <a href="tel:+913581255222" class="call-btn">Call: 03581-255222</a>
       </li>
@@ -386,24 +460,121 @@
     <p>Coming soon! Stay connected for the latest updates about Mathabhanga.</p>
   </div>
 </div>
-<!-- Transport -->
-<div class="modal" id="modal-transport">
+
+
+
+
+<!-- Public Transport Schedules Modal -->
+<div class="modal" id="modal-transport" aria-modal="true" tabindex="-1">
   <div class="modal-content">
-    <button class="close">&times;</button>
+    <button class="close" aria-label="Close">&times;</button>
     <h3>Public Transport Schedules</h3>
-    <ul class="contact-list">
-      <li>
-        <strong>Mathabhanga Bus Depot</strong><br>
-        Helpline: <a href="tel:+913581255888" class="call-btn">03581-255888</a>
+    
+    <strong style="color:#00ffff;">Bus Timings (Example)</strong>
+    <table style="width:100%;margin:10px 0 18px 0;border-collapse:collapse;">
+      <tr>
+        <th style="text-align:left;color:#a0a0ff;">Route</th>
+        <th style="text-align:left;color:#a0a0ff;">First Bus</th>
+        <th style="text-align:left;color:#a0a0ff;">Last Bus</th>
+      </tr>
+      <tr>
+        <td style="color:#e0e0e0;">Mathabhanga – Coochbehar</td>
+        <td style="color:#b0b0b0;">06:20 AM</td>
+        <td style="color:#b0b0b0;">07:45 PM</td>
+      </tr>
+      <tr>
+        <td style="color:#e0e0e0;">Mathabhanga – Siliguri</td>
+        <td style="color:#b0b0b0;">05:30 AM</td>
+        <td style="color:#b0b0b0;">05:00 PM</td>
+      </tr>
+      <tr>
+        <td style="color:#e0e0e0;">Mathabhanga – Alipurduar</td>
+        <td style="color:#b0b0b0;">07:00 AM</td>
+        <td style="color:#b0b0b0;">06:35 PM</td>
+      </tr>
+      <!-- Add more as needed -->
+    </table>
+    <p style="margin-bottom:10px;">
+      <span style="color:#fff;">Bus Depot Helpline:</span>
+      <a href="tel:+913581255888" class="call-btn">03581-255888</a>
+    </p>
+    
+    <strong style="color:#00ffff;">Train Schedules (Example)</strong>
+    <table style="width:100%;margin:10px 0 18px 0;border-collapse:collapse;">
+      <tr>
+        <th style="text-align:left;color:#a0a0ff;">Train</th>
+        <th style="text-align:left;color:#a0a0ff;">Mathabhanga</th>
+        <th style="text-align:left;color:#a0a0ff;">Destination</th>
+      </tr>
+      <tr>
+        <td style="color:#e0e0e0;">Siliguri Express</td>
+        <td style="color:#b0b0b0;">08:10 AM</td>
+        <td style="color:#b0b0b0;">Siliguri</td>
+      </tr>
+      <tr>
+        <td style="color:#e0e0e0;">Coochbehar Local</td>
+        <td style="color:#b0b0b0;">02:30 PM</td>
+        <td style="color:#b0b0b0;">Coochbehar</td>
+      </tr>
+      <tr>
+        <td style="color:#e0e0e0;">Alipurduar Passenger</td>
+        <td style="color:#b0b0b0;">06:17 PM</td>
+        <td style="color:#b0b0b0;">Alipurduar</td>
+      </tr>
+      <!-- Add more as needed -->
+    </table>
+    <p>
+      <span style="color:#fff;">Railway Enquiry:</span>
+      <a href="tel:139" class="call-btn">139</a> &nbsp;
+      <a href="https://irctc.co.in/" target="_blank" class="call-btn" style="color:#0a0a1a;">Book Tickets</a>
+    </p>
+    
+    <p style="margin-top:10px;color:#888;font-size:0.93em;">
+      *Timings are indicative. Confirm current schedule with helplines or <strong>IRCTC</strong>.
+    </p>
+  </div>
+</div>
+
+
+<!-- PAN Card Correction Modal -->
+<div class="modal" id="modal-pan" aria-modal="true" tabindex="-1">
+  <div class="modal-content">
+    <button class="close" aria-label="Close">&times;</button>
+    <h3>PAN Card Correction Guide</h3>
+    <ol style="color:#b0b0b0; line-height: 1.4;">
+      <li>Visit NSDL or UTIITSL PAN correction portal:<br>
+        <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" target="_blank" class="call-btn" style="color:#0a0a1a;">NSDL PAN</a>
       </li>
-      <li>
-        <strong>Mathabhanga Railway Enquiry</strong><br>
-        <a href="tel:139" class="call-btn">139</a>
+      <li>Fill the form with accurate details.</li>
+      <li>Upload valid supporting documents (proof of identity, address, etc.).</li>
+      <li>Pay the correction fee online.</li>
+      <li>Submit and note the acknowledgement number for tracking.</li>
+    </ol>
+    <p style="margin-top: 15px; font-weight:bold; color: #00ffff;">Do it with 3rd Party (₹200)</p>
+    <p>Visit your local expert with documents, call:</p>
+    <a href="tel:+919091544508" class="call-btn" tabindex="0">+91 90915 44508</a>
+    <p style="font-size: 0.9em; color: #888;">No more extra charges, Get PAN at your doorstep.</p>
+  </div>
+</div>
+
+<!-- Driving Licence Services Modal -->
+<div class="modal" id="modal-dl" aria-modal="true" tabindex="-1">
+  <div class="modal-content">
+    <button class="close" aria-label="Close">&times;</button>
+    <h3>Driving Licence Services Guide</h3>
+    <ol style="color:#b0b0b0; line-height: 1.4;">
+      <li>Go to the official Parivahan portal:<br>
+        <a href="https://parivahan.gov.in/parivahan/en/content/driving-licence" target="_blank" class="call-btn" style="color:#0a0a1a;">Apply/Renew DL Online</a>
       </li>
-      <li>
-        <a href="https://irctc.co.in/" target="_blank" class="call-btn" style="color:#0a0a1a;">Book Railway Tickets</a>
-      </li>
-    </ul>
+      <li>Select your state, then click “Apply Online” for New/Renewal/Correction.</li>
+      <li>Fill out the online application and upload any required documents.</li>
+      <li>Book appointment for biometrics/fingerprints (RTO visit may be needed).</li>
+      <li>Track status using your application number.</li>
+    </ol>
+    <p style="margin-top: 15px; font-weight:bold; color: #00ffff;">3rd Party Help</p>
+    <p>For booking slots or agent contacts, call:</p>
+    <a href="tel:+919091544508" class="call-btn" tabindex="0">+91 90915 44508 (Free Guide Only)</a>
+    <p style="font-size: 0.9em; color: #888;">Local RTO agents offer document review & appointment booking.</p>
   </div>
 </div>
 
