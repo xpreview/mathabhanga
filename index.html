@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathabhanga Connect | Your Futuristic City Hub</title>
+    <style>
+        /* Basic Reset & Futuristic Font */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background-color: #0a0a1a; /* Dark blue-black background */
+            color: #e0e0e0; /* Light grey text */
+            line-height: 1.6;
+        }
+
+        /* --- Main Structure & Layout --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.5) 35%, rgba(0,212,255,0.2) 100%);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #00ffff; /* Neon cyan border */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffffff;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            color: #a0a0ff;
+        }
+
+        nav {
+            background-color: #1a1a3a;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ffff;
+            text-shadow: 0 0 8px #00ffff;
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #1a1a3a;
+            border-top: 1px solid #00ffff;
+        }
+
+        /* --- Section Styling --- */
+        .section {
+            margin-bottom: 50px;
+            background: rgba(26, 26, 58, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #3a3a5a;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            color: #00ffff;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- Grid for Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: #0f0f24;
+            border: 1px solid #3a3a5a;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.15);
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            color: #a0a0ff;
+        }
+        
+        .service-card p {
+            color: #b0b0b0;
+            font-size: 0.9em;
+        }
+
+        /* --- Button Styling --- */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #00ffff, #007bff);
+            color: #0a0a1a;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00ffff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Mathabhanga - Our Town</h1>
+            <p>The Future of Our Town, Today.</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#urgent-services">Urgent Services</a>
+        <a href="#essential-services">Essentials</a>
+        <a href="#more-info">More Info</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- Urgent Services Section -->
+        <section id="urgent-services" class="section">
+            <h2 class="section-title">Instant Help & Urgent Services</h2>
+            <div class="services-grid">
+                
+                <!-- LPG Gas Delivery -->
+                <div class="service-card">
+                    <h3>Urgent LPG Gas Delivery</h3>
+                    <p>Need cooking gas in 30 minutes? Get connected to the fastest delivery service in Mathabhanga.</p>
+                    <!-- IMPORTANT: Replace '#' with the actual link to the gas delivery website -->
+                    <a href="#" class="btn" target="_blank">Redirect to Order</a>
+                </div>
+                
+                <!-- Best WiFi Provider -->
+                <div class="service-card">
+                    <h3>Best WiFi Service</h3>
+                    <p>Find the most reliable and high-speed internet providers for your home or business.</p>
+                     <!-- IMPORTANT: Replace '#' with the link to your recommended WiFi provider -->
+                    <a href="#" class="btn">Explore Providers</a>
+                </div>
+
+                <!-- Voter ID Correction -->
+                <div class="service-card">
+                    <h3>Instant Voter ID Correction</h3>
+                    <p>Correct or update your voter information quickly through the official portal.</p>
+                     <!-- IMPORTANT: Replace '#' with the official government link -->
+                    <a href="#" class="btn" target="_blank">Start Correction</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Other Essential City Services -->
+        <section id="essential-services" class="section">
+            <h2 class="section-title">Essential City Services</h2>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <h3>Emergency Helplines</h3>
+                    <p>Quick access to Police, Fire, and Ambulance services.</p>
+                    <!-- You can list numbers or link to a page with details -->
+                    <a href="#" class="btn">View Numbers</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>Local News & Updates</h3>
+                    <p>Stay informed with the latest happenings and announcements in Mathabhanga.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Public Transport</h3>
+                    <p>Find bus routes, train schedules, and local transport information.</p>
+                    <a href="#" class="btn">Check Timetables</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mathabhanga. A community initiative.</p>
+        <p>Built to serve the people of Mathabhanga, West Bengal.</p>
+    </footer>
+
+</body>
+</html>
