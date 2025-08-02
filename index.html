@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathabhanga Connect | Your Futuristic City Hub</title>
+    <title>Mathabhanga - Our Town</title>
     <style>
-        /* Basic Reset & Futuristic Font */
         body {
             margin: 0;
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-            background-color: #0a0a1a; /* Dark blue-black background */
-            color: #e0e0e0; /* Light grey text */
+            background-color: #0a0a1a;
+            color: #e0e0e0;
             line-height: 1.6;
         }
 
-        /* --- Main Structure & Layout --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -25,7 +23,7 @@
             background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.5) 35%, rgba(0,212,255,0.2) 100%);
             padding: 20px 0;
             text-align: center;
-            border-bottom: 2px solid #00ffff; /* Neon cyan border */
+            border-bottom: 2px solid #00ffff;
         }
 
         header h1 {
@@ -74,7 +72,6 @@
             border-top: 1px solid #00ffff;
         }
 
-        /* --- Section Styling --- */
         .section {
             margin-bottom: 50px;
             background: rgba(26, 26, 58, 0.6);
@@ -92,7 +89,6 @@
             letter-spacing: 2px;
         }
 
-        /* --- Grid for Services --- */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -120,10 +116,9 @@
         
         .service-card p {
             color: #b0b0b0;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
 
-        /* --- Button Styling --- */
         .btn {
             display: inline-block;
             background: linear-gradient(90deg, #00ffff, #007bff);
@@ -134,97 +129,312 @@
             font-weight: bold;
             margin-top: 15px;
             transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
         }
 
-        .btn:hover {
+        .btn:hover, .btn:focus {
             transform: scale(1.05);
             box-shadow: 0 0 15px #00ffff;
+            outline: none;
         }
 
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background: rgba(5, 20, 40, 0.60);
+            backdrop-filter: blur(2px);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.show {
+            display: flex;
+        }
+        .modal-content {
+            background: #15152d;
+            border: 2px solid #00ffff;
+            border-radius: 16px;
+            margin: 20px;
+            padding: 30px 25px 22px 28px;
+            max-width: 95vw;
+            width: 340px;
+            box-shadow: 0 0 30px #00ffff88, 0 0 40px #005a7544;
+            position: relative;
+            animation: popup 0.25s;
+        }
+
+        @keyframes popup {
+            from {transform: scale(0.85);}
+            to {transform: scale(1);}
+        }
+
+        .close {
+            position: absolute;
+            top: 18px;
+            right: 24px;
+            color: #00ffff;
+            font-size: 1.6em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+            background: none;
+            border: none;
+        }
+        .close:hover { color: #ff2070;}
+
+        .modal-content h3 {
+            margin: 0 0 10px;
+            color: #00ffff;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 9px 0 0 0;
+        }
+        .contact-list li {
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #39386d;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .contact-list li:last-child { border-bottom: none;}
+        .call-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #00ffff, #007bff);
+            color: #0a0a1a !important;
+            padding: 6px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 4px;
+            transition: box-shadow 0.2s;
+        }
+        .call-btn:hover { box-shadow: 0 0 12px #00ffffbb;}
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 800px) {
+            .container {padding: 10px;}
+            main {padding: 20px 0;}
+            .services-grid { 
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .section {padding: 20px;}
+            header h1 {font-size: 1.8em;}
+            .section-title {font-size: 1.3em;}
+            nav {font-size: 0.96em;}
+        }
+        @media (max-width: 525px) {
+            .modal-content {width: 96vw;padding: 16px 6vw 16px 10vw;}
+            header h1 {font-size: 1.23em;}
+            nav a {margin: 0 8px;}
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Mathabhanga - Our Town</h1>
-            <p>The Future of Our Town, Today.</p>
+<header>
+    <div class="container">
+        <h1>Mathabhanga - Our Town</h1>
+        <p>The Future of Our Town, Today.</p>
+    </div>
+</header>
+
+<nav>
+    <a href="#urgent-services">Urgent Services</a>
+    <a href="#essential-services">Essentials</a>
+    <a href="#more-info">More Info</a>
+</nav>
+
+<main class="container">
+    <!-- Urgent Services Section -->
+    <section id="urgent-services" class="section">
+        <h2 class="section-title">Instant Help & Book Services</h2>
+        <div class="services-grid">
+            <!-- LPG Gas Delivery -->
+            <div class="service-card">
+                <h3>Urgent LPG Gas Delivery</h3>
+                <p>Need cooking gas in 30 minutes? Get connected to the fastest delivery service in Mathabhanga.</p>
+                <button class="btn open-modal" data-modal="modal-gas">Redirect to Order</button>
+            </div>
+            <!-- Best WiFi Provider -->
+            <div class="service-card">
+                <h3>Best WiFi Service</h3>
+                <p>Find the most reliable and high-speed internet providers for your home or business.</p>
+                <button class="btn open-modal" data-modal="modal-wifi">Explore Providers</button>
+            </div>
+            <!-- Voter ID Correction -->
+            <div class="service-card">
+                <h3>Instant Voter ID Correction</h3>
+                <p>Correct or update your voter information quickly through the official portal.</p>
+                <button class="btn open-modal" data-modal="modal-voter">Start Correction</button>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <nav>
-        <a href="#urgent-services">Urgent Services</a>
-        <a href="#essential-services">Essentials</a>
-        <a href="#more-info">More Info</a>
-    </nav>
-
-    <main class="container">
-
-        <!-- Urgent Services Section -->
-        <section id="urgent-services" class="section">
-            <h2 class="section-title">Instant Help & Urgent Services</h2>
-            <div class="services-grid">
-                
-                <!-- LPG Gas Delivery -->
-                <div class="service-card">
-                    <h3>Urgent LPG Gas Delivery</h3>
-                    <p>Need cooking gas in 30 minutes? Get connected to the fastest delivery service in Mathabhanga.</p>
-                    <!-- IMPORTANT: Replace '#' with the actual link to the gas delivery website -->
-                    <a href="#" class="btn" target="_blank">Redirect to Order</a>
-                </div>
-                
-                <!-- Best WiFi Provider -->
-                <div class="service-card">
-                    <h3>Best WiFi Service</h3>
-                    <p>Find the most reliable and high-speed internet providers for your home or business.</p>
-                     <!-- IMPORTANT: Replace '#' with the link to your recommended WiFi provider -->
-                    <a href="#" class="btn">Explore Providers</a>
-                </div>
-
-                <!-- Voter ID Correction -->
-                <div class="service-card">
-                    <h3>Instant Voter ID Correction</h3>
-                    <p>Correct or update your voter information quickly through the official portal.</p>
-                     <!-- IMPORTANT: Replace '#' with the official government link -->
-                    <a href="#" class="btn" target="_blank">Start Correction</a>
-                </div>
-                
+    <!-- Other Essential City Services -->
+    <section id="essential-services" class="section">
+        <h2 class="section-title">Essential City Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Emergency Helplines</h3>
+                <p>Quick access to Police, Fire, and Ambulance services.</p>
+                <button class="btn open-modal" data-modal="modal-emergency">View Numbers</button>
             </div>
-        </section>
-
-        <!-- Other Essential City Services -->
-        <section id="essential-services" class="section">
-            <h2 class="section-title">Essential City Services</h2>
-            <div class="services-grid">
-
-                <div class="service-card">
-                    <h3>Emergency Helplines</h3>
-                    <p>Quick access to Police, Fire, and Ambulance services.</p>
-                    <!-- You can list numbers or link to a page with details -->
-                    <a href="#" class="btn">View Numbers</a>
-                </div>
-
-                <div class="service-card">
-                    <h3>Local News & Updates</h3>
-                    <p>Stay informed with the latest happenings and announcements in Mathabhanga.</p>
-                    <a href="#" class="btn">Coming Soon</a>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Public Transport</h3>
-                    <p>Find bus routes, train schedules, and local transport information.</p>
-                    <a href="#" class="btn">Check Timetables</a>
-                </div>
-
+            <div class="service-card">
+                <h3>Local News & Updates</h3>
+                <p>Stay informed with the latest happenings and announcements in Mathabhanga.</p>
+                <button class="btn open-modal" data-modal="modal-news">Coming Soon</button>
             </div>
-        </section>
+            <div class="service-card">
+                <h3>Public Transport</h3>
+                <p>Find bus routes, train schedules, and local transport information.</p>
+                <button class="btn open-modal" data-modal="modal-transport">Check Timetables</button>
+            </div>
+        </div>
+    </section>
+</main>
 
-    </main>
+<footer>
+    <p>&copy; 2025 Mathabhanga. A community initiative.</p>
+    <p>Built to serve the people of Mathabhanga, West Bengal.</p>
+</footer>
 
-    <footer>
-        <p>&copy; 2025 Mathabhanga. A community initiative.</p>
-        <p>Built to serve the people of Mathabhanga, West Bengal.</p>
-    </footer>
+<!-- Popups/Modals for each service -->
+<!-- LPG Gas Delivery -->
+<div class="modal" id="modal-gas">
+  <div class="modal-content">
+    <button class="close">&times;</button>
+    <h3>Urgent LPG Gas Delivery</h3>
+    <p>Missed Call to Order LPG (Official - Delivery within 3 working days) :
+      <br>
+      <a href="tel:+918457955555" class="call-btn">Call Now : 8454955555 (Indiane)</a>
+      <a href="tel:+918457955555" class="call-btn">Call Now : 84XXXXXXX (HP)</a>
+      <br><br>
+      Or Emergency 30 Mins Delivery by 3rd Party (₹1005 + ₹25 Delivery Charge) : <a href="tel:+919378111408" target="_blank" class="call-btn" style="color:#0a0a1a;">Tap to Call</a>
+    </p>
+  </div>
+</div>
+<!-- WiFi Providers -->
+<div class="modal" id="modal-wifi">
+  <div class="modal-content">
+    <button class="close">&times;</button>
+    <h3>WiFi Providers</h3>
+    <ul class="contact-list">
+      <li>
+        LocalNet Mathabhanga<br>
+        <a href="tel:+919384884420" class="call-btn">Call: +91 93848 84420</a>
+      </li>
+      <li>
+        BSNL Broadband<br>
+        <a href="tel:18003451504" class="call-btn">Call: 18003451504</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Voter ID Correction -->
+<div class="modal" id="modal-voter">
+  <div class="modal-content">
+    <button class="close">&times;</button>
+    <h3>Instant Voter ID Correction</h3>
+    <p>Visit the Election Commission Official Portal to update your voter info:<br>
+      <a href="https://voters.eci.gov.in/" target="_blank" class="call-btn" style="color:#0a0a1a;">Go to Portal</a>
+    </p>
+    <p>Helpline: <a href="tel:1950" class="call-btn">Call 1950</a></p>
+  </div>
+</div>
+<!-- Emergency Helplines -->
+<div class="modal" id="modal-emergency">
+  <div class="modal-content">
+    <button class="close">&times;</button>
+    <h3>Emergency Contacts</h3>
+    <ul class="contact-list">
+      <li>
+        Police Station<br>
+        <a href="tel:100" class="call-btn">Call: 100</a>
+      </li>
+      <li>
+        Fire Brigade<br>
+        <a href="tel:101" class="call-btn">Call: 101</a>
+      </li>
+      <li>
+        Ambulance<br>
+        <a href="tel:102" class="call-btn">Call: 102</a>
+      </li>
+      <li>
+        Mathabhanga Hospital<br>
+        <a href="tel:+913581255222" class="call-btn">Call: 03581-255222</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Local News -->
+<div class="modal" id="modal-news">
+  <div class="modal-content">
+    <button class="close">&times;</button>
+    <h3>Local News & Updates</h3>
+    <p>Coming soon! Stay connected for the latest updates about Mathabhanga.</p>
+  </div>
+</div>
+<!-- Transport -->
+<div class="modal" id="modal-transport">
+  <div class="modal-content">
+    <button class="close">&times;</button>
+    <h3>Public Transport Schedules</h3>
+    <ul class="contact-list">
+      <li>
+        <strong>Mathabhanga Bus Depot</strong><br>
+        Helpline: <a href="tel:+913581255888" class="call-btn">03581-255888</a>
+      </li>
+      <li>
+        <strong>Mathabhanga Railway Enquiry</strong><br>
+        <a href="tel:139" class="call-btn">139</a>
+      </li>
+      <li>
+        <a href="https://irctc.co.in/" target="_blank" class="call-btn" style="color:#0a0a1a;">Book Railway Tickets</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
+<script>
+// Modal functionality
+document.querySelectorAll('.open-modal').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const id = this.dataset.modal;
+        document.getElementById(id).classList.add('show');
+    });
+});
+document.querySelectorAll('.modal').forEach(modal => {
+    // Close on clicking '×'
+    modal.querySelector('.close').addEventListener('click', function () {
+        modal.classList.remove('show');
+    });
+    // Close if clicking background
+    modal.addEventListener('click', function(e){
+        if(e.target === modal) modal.classList.remove('show');
+    });
+    // ESC to close
+    modal.addEventListener('keydown', function(e) {
+      if(e.key==='Escape') modal.classList.remove('show');
+    });
+});
+// Allow modals to be closed with ESC key (global)
+document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+        document.querySelectorAll('.modal.show').forEach(modal => modal.classList.remove('show'));
+    }
+});
+</script>
 </body>
 </html>
